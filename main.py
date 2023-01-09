@@ -40,7 +40,6 @@ if user_bet:
 winners = []
 while is_race_on:
     for turtle in turtle_racers:
-        turtle.forward(randint(0, 10))
         if turtle.xcor() > 225:
             winners.append(turtle)
             winning_turtle = winners[0]
@@ -50,7 +49,8 @@ while is_race_on:
                 print(f"You've won! The {winning_color} turtle is the winner!")
             else:
                 print(f"You lost. The {winning_color} turtle is the winner.")
-            # print(list(winners))
+            print(list(winners))
+        turtle.forward(randint(0, 10))
 
 
 screen.exitonclick()
